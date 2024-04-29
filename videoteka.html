@@ -34,7 +34,7 @@ padding-bottom: 20px;
 <body>
 <header></header>
 <script>
-var requestURL = 'https://serp802.github.io/json/videoteka.json';
+var requestURL = 'https://serp802.github.io/filmsimg/videoteka.json';
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
 request.responseType = 'json';
@@ -49,6 +49,7 @@ var header = document.querySelector('header');
 card = document.createElement('div');
 header.appendChild(card);
 img = document.createElement('img');
+alert(img)
 img.src = "filmsimg/" + jsonObj[i]['cover']
 alert(img.src)
 card.appendChild(img);
