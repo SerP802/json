@@ -49,9 +49,8 @@ var header = document.querySelector('header');
 card = document.createElement('div');
 header.appendChild(card);
 img = document.createElement('img');
-alert(img);
-img.src = "filmsimg/" + jsonObj[i]['cover']
-alert(img.src);
+img.src = jsonObj[i]['cover']
+alert(img.src)
 card.appendChild(img);
 H1 = document.createElement('h1');
 H1.textContent = jsonObj[i]['title'];
