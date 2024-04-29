@@ -35,21 +35,22 @@ padding-bottom: 20px;
 <header></header>
 <script>
 var requestURL = 'https://serp802.github.io/json/videoteka.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
+  var request = new XMLHttpRequest();
+  request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function () {
-var VideoFilms = request.response;
+    var VideoFilms = request.response;
 writeVideoFilms(VideoFilms);
 }
 function writeVideoFilms(jsonObj) {
 var header = document.querySelector('header');
-for (let i = 0; i < jsonObj.length; i++) {
+  for (let i = 0; i < jsonObj.length; i++) {
 card = document.createElement('div');
 header.appendChild(card);
 img = document.createElement('img');
-img.src = "filmsimg/" + jsonObj[i]['cover']
+img.src = jsonObj[i]['cover']
+alert(img);
 card.appendChild(img);
 H1 = document.createElement('h1');
 H1.textContent = jsonObj[i]['title'];
